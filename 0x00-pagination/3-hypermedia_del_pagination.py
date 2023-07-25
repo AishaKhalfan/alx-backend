@@ -56,4 +56,3 @@ class Server:
                 'data': pages
                 }
         next_index = index + page_size
-
