@@ -7,6 +7,9 @@ class BasicCache(BaseCaching):
     """
     BasicCache defines:
     """
+    def __init__(self) -> None:
+        """BaseCaching Caching System"""
+        super().__init__()
 
     def put(self, key, item):
         """Add an item in the cache."""
