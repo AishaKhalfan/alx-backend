@@ -20,7 +20,6 @@ class LIFOCache(BaseCaching):
                 del(self.cache_data[lastItem])
             self.cache_data[key] = item
 
-
     def get(self, key):
         """Get function"""
         if key is None:
