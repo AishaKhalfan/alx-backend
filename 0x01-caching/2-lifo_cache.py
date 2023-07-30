@@ -19,3 +19,9 @@ class LIFOCache(BaseCaching):
                 lastItem = list(self.cache_data.keys())[-1]
                 print(f"DISCARD:{lastItem}")
                 del(self.cache_data[lastItem])
+    
+    def get(self, key):
+        if key is None or key not in self.cache_data:
+            return None
+        else:
+            return self.cache_[key]
