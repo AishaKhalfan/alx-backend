@@ -19,7 +19,7 @@ class LIFOCache(BaseCaching):
                 lastItem = list(self.cache_data.keys())[-1]
                 print(f"DISCARD:{lastItem}")
                 del(self.cache_data[lastItem])
-    
+
     def get(self, key):
         """Get function"""
         if key is None or key not in self.cache_data:
