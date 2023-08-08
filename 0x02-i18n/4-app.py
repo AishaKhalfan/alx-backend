@@ -22,7 +22,7 @@ babel = Babel(app)
 @babel.localeselector
 def get_locale():
     """Locale selector."""
-    if request.args.get('locale') in Config.LANGUAGES:
+    if request.args.get('locale') in app.config['LANGUAGES']
         print(locale)
         return request.args.get('locale')
 
@@ -32,9 +32,11 @@ def get_locale():
 @app.route('/', strict_slashes=False)
 def index():
     """
-    returns the rendered template `index.html`
+    returns the rendered template `4-index.html`
     """
-    return render_template('4-index.html')
+    locale = get_locale()
+
+    return render_template('4-index.html', locale=locale)
 
 
 if __name__ == '__main__':
