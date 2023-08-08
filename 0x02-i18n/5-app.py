@@ -31,10 +31,9 @@ users = {
 }
 
 
-
 def get_user() -> dict:
     """
-    returns a user dictionary or None if the ID 
+    returns a user dictionary or None if the ID
     cannot be found or if login_as was not passed.
     """
     login_id = request.args.get('login_as')
