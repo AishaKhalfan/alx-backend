@@ -75,7 +75,7 @@ def get_locale() -> str:
 def index():
     """mocking log in
     """
-    return render_template('5-index.html', users=users)
+    return render_template('6-index.html', users=users)
 
 
 if __name__ == '__main__':
