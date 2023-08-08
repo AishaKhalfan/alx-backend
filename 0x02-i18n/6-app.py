@@ -45,8 +45,8 @@ def get_user() -> dict:
 @app.before_request
 def before_request():
     """find a user if any, and set it as a global on flask.g.user"""
-    if get_user():
-        g.user = get_user()
+    user = get_user():
+    g.user = user
 
 
 @babel.localeselector
