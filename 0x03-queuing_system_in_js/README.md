@@ -164,10 +164,10 @@ Using Babel and ES6, write a script named `0-redis_client.js`. It should connect
 - To import the library, you need to use the keyword `import`
 
 ```
-bob@dylan:~$ ps ax | grep redis-server
+khalfan@aisha:~$ ps ax | grep redis-server
  2070 pts/1    S+     0:00 grep --color=auto redis-server
-bob@dylan:~$
-bob@dylan:~$ npm run dev 0-redis_client.js
+khalfan@aisha:~$
+khalfan@aisha:~$ npm run dev 0-redis_client.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "0-redis_client.js"
@@ -181,14 +181,14 @@ Redis client not connected to the server: Error: Redis connection to 127.0.0.1:6
 Redis client not connected to the server: Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
 Redis client not connected to the server: Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
 ^C
-bob@dylan:~$
-bob@dylan:~$ ./src/redis-server > /dev/null 2>&1 &
+khalfan@aisha:~$
+khalfan@aisha:~$ ./src/redis-server > /dev/null 2>&1 &
 [1] 2073
-bob@dylan:~$ ps ax | grep redis-server
+khalfan@aisha:~$ ps ax | grep redis-server
  2073 pts/0    Sl     0:00 ./src/redis-server *:6379
  2078 pts/1    S+     0:00 grep --color=auto redis-server
-bob@dylan:~$
-bob@dylan:~$ npm run dev 0-redis_client.js
+khalfan@aisha:~$
+khalfan@aisha:~$ npm run dev 0-redis_client.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "0-redis_client.js"
@@ -200,7 +200,7 @@ bob@dylan:~$ npm run dev 0-redis_client.js
 [nodemon] starting `babel-node --presets @babel/preset-env 0-redis_client.js`
 Redis client connected to the server
 ^C
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -237,7 +237,7 @@ At the end of the file, call:
 - Use callbacks for any of the operation, we will look at async operations later
 
 ```
-bob@dylan:~$ npm run dev 1-redis_op.js
+khalfan@aisha:~$ npm run dev 1-redis_op.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "1-redis_op.js"
@@ -253,7 +253,7 @@ Reply: OK
 100
 ^C
 
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -272,7 +272,7 @@ Using `promisify`, modify the function `displaySchoolValue` to use ES6 `async / 
 Same result as `1-redis_op.js`
 
 ```
-bob@dylan:~$ npm run dev 2-redis_op_async.js
+khalfan@aisha:~$ npm run dev 2-redis_op_async.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "2-redis_op_async.js"
@@ -288,7 +288,7 @@ Reply: OK
 100
 ^C
 
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -325,7 +325,7 @@ Using `hgetall`, display the object stored in Redis. It should return the follow
 - Use callbacks for any of the operation, we will look at async operations later
 
 ```
-bob@dylan:~$ npm run dev 4-redis_advanced_op.js
+khalfan@aisha:~$ npm run dev 4-redis_advanced_op.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "4-redis_advanced_op.js"
@@ -351,7 +351,7 @@ Reply: 1
   Paris: '2'
 }
 ^C
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -398,7 +398,7 @@ publishMessage("Holberton Student #3 starts course", 400);
 **Terminal 1:**
 
 ```
-bob@dylan:~$ npm run dev 5-subscriber.js
+khalfan@aisha:~$ npm run dev 5-subscriber.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "5-subscriber.js"
@@ -415,7 +415,7 @@ Redis client connected to the server
 **Terminal 2:**
 
 ```
-bob@dylan:~$ npm run dev 5-publisher.js
+khalfan@aisha:~$ npm run dev 5-publisher.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "5-publisher.js"
@@ -431,7 +431,7 @@ About to send Holberton Student #2 starts course
 About to send KILL_SERVER
 About to send Holberton Student #3 starts course
 ^C
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -444,7 +444,7 @@ Holberton Student #2 starts course
 KILL_SERVER
 [nodemon] clean exit - waiting for changes before restart
 ^C
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -477,7 +477,7 @@ In a file named `6-job_creator.js`:
 - When the job is failing, log to the console `Notification job failed`
 
 ```
-bob@dylan:~$ npm run dev 6-job_creator.js
+khalfan@aisha:~$ npm run dev 6-job_creator.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "6-job_creator.js"
@@ -522,7 +522,7 @@ In a file named `6-job_processor.js`:
 **Terminal 2:**
 
 ```
-bob@dylan:~$ npm run dev 6-job_processor.js
+khalfan@aisha:~$ npm run dev 6-job_processor.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "6-job_processor.js"
@@ -540,7 +540,7 @@ Sending notification to 4153518780, with message: This is the code to verify you
 **Terminal 1:** let’s queue a new job!
 
 ```
-bob@dylan:~$ npm run dev 6-job_creator.js
+khalfan@aisha:~$ npm run dev 6-job_creator.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "6-job_creator.js"
@@ -639,7 +639,7 @@ After this array created:
 **Terminal 1**:
 
 ```
-bob@dylan:~$ npm run dev 7-job_creator.js
+khalfan@aisha:~$ npm run dev 7-job_creator.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "7-job_creator.js"
@@ -696,7 +696,7 @@ Create a queue with `Kue` that will proceed job of the queue `push_notification_
 **Terminal 2:**
 
 ```
-bob@dylan:~$ npm run dev 7-job_processor.js
+khalfan@aisha:~$ npm run dev 7-job_processor.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "7-job_processor.js"
@@ -776,7 +776,7 @@ In a file named `8-job.js`, create a function named `createPushNotificationsJobs
 - When a job is making progress, it should log to the console `Notification job JOB_ID PERCENT% complete`
 
 ```
-bob@dylan:~$ cat 8-job-main.js
+khalfan@aisha:~$ cat 8-job-main.js
 import kue from 'kue';
 
 import createPushNotificationsJobs from './8-job.js';
@@ -791,8 +791,8 @@ const list = [
 ];
 createPushNotificationsJobs(list, queue);
 
-bob@dylan:~$
-bob@dylan:~$ npm run dev 8-job-main.js
+khalfan@aisha:~$
+khalfan@aisha:~$ npm run dev 8-job-main.js
 
 > queuing_system_in_js@1.0.0 dev /root
 > nodemon --exec babel-node --presets @babel/preset-env "8-job-main.js"
@@ -829,7 +829,7 @@ Now that you created a job creator, let’s add tests:
 - Make sure to clear the queue and exit the test mode after executing the tests
 
 ```
-bob@dylan:~$ npm test 8-job.test.js
+khalfan@aisha:~$ npm test 8-job.test.js
 
 > queuing_system_in_js@1.0.0 test /root
 > mocha --require @babel/register --exit "8-job.test.js"
@@ -881,9 +881,9 @@ Create an `express` server listening on the port 1245. (You will start it via: `
 Create the route `GET /list_products` that will return the list of every available product with the following JSON format:
 
 ```
-bob@dylan:~$ curl localhost:1245/list_products ; echo ""
+khalfan@aisha:~$ curl localhost:1245/list_products ; echo ""
 [{"itemId":1,"itemName":"Suitcase 250","price":50,"initialAvailableQuantity":4},{"itemId":2,"itemName":"Suitcase 450","price":100,"initialAvailableQuantity":10},{"itemId":3,"itemName":"Suitcase 650","price":350,"initialAvailableQuantity":2},{"itemId":4,"itemName":"Suitcase 1050","price":550,"initialAvailableQuantity":5}]
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -901,18 +901,18 @@ Create a client to connect to the Redis server:
 Create the route `GET /list_products/:itemId`, that will return the current product and the current available stock (by using `getCurrentReservedStockById`) with the following JSON format:
 
 ```
-bob@dylan:~$ curl localhost:1245/list_products/1 ; echo ""
+khalfan@aisha:~$ curl localhost:1245/list_products/1 ; echo ""
 {"itemId":1,"itemName":"Suitcase 250","price":50,"initialAvailableQuantity":4,"currentQuantity":4}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
 If the item does not exist, it should return:
 
 ```
-bob@dylan:~$ curl localhost:1245/list_products/12 ; echo ""
+khalfan@aisha:~$ curl localhost:1245/list_products/12 ; echo ""
 {"status":"Product not found"}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -923,27 +923,27 @@ Create the route `GET /reserve_product/:itemId`:
 - If the item does not exist, it should return:
 
 ```
-bob@dylan:~$ curl localhost:1245/reserve_product/12 ; echo ""
+khalfan@aisha:~$ curl localhost:1245/reserve_product/12 ; echo ""
 {"status":"Product not found"}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
 - If the item exists, it should check that there is at least one stock available. If not it should return:
 
 ```
-bob@dylan:~$ curl localhost:1245/reserve_product/1 ; echo ""
+khalfan@aisha:~$ curl localhost:1245/reserve_product/1 ; echo ""
 {"status":"Not enough stock available","itemId":1}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
 - If there is enough stock available, it should reserve one item (by using `reserveStockById`), and return:
 
 ```
-bob@dylan:~$ curl localhost:1245/reserve_product/1 ; echo ""
+khalfan@aisha:~$ curl localhost:1245/reserve_product/1 ; echo ""
 {"status":"Reservation confirmed","itemId":1}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -981,9 +981,9 @@ Create an express server listening on the port 1245. (You will start it via: `np
 Add the route `GET /available_seats` that returns the number of seat available:
 
 ```
-bob@dylan:~$ curl localhost:1245/available_seats ; echo ""
+khalfan@aisha:~$ curl localhost:1245/available_seats ; echo ""
 {"numberOfAvailableSeats":"50"}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -998,9 +998,9 @@ Add the route `GET /reserve_seat` that:
   - When the job failed, print in the console: `Seat reservation job JOB_ID failed: ERROR_MESSAGE`
 
 ```
-bob@dylan:~$ curl localhost:1245/reserve_seat ; echo ""
+khalfan@aisha:~$ curl localhost:1245/reserve_seat ; echo ""
 {"status":"Reservation in process"}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -1014,12 +1014,12 @@ Add the route `GET /process` that:
   - Otherwise, fail the job with an `Error` with the message `Not enough seats available`
 
 ```
-bob@dylan:~$ curl localhost:1245/process ; echo ""
+khalfan@aisha:~$ curl localhost:1245/process ; echo ""
 {"status":"Queue processing"}
-bob@dylan:~$
-bob@dylan:~$ curl localhost:1245/available_seats ; echo ""
+khalfan@aisha:~$
+khalfan@aisha:~$ curl localhost:1245/available_seats ; echo ""
 {"numberOfAvailableSeats":"49"}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
@@ -1033,7 +1033,7 @@ Seat reservation job 52 completed
 and you can reserve all seats:
 
 ```
-bob@dylan:~$ for n in {1..50}; do curl localhost:1245/reserve_seat ; echo ""; done
+khalfan@aisha:~$ for n in {1..50}; do curl localhost:1245/reserve_seat ; echo ""; done
 {"status":"Reservation in process"}
 {"status":"Reservation in process"}
 ...
@@ -1043,7 +1043,7 @@ bob@dylan:~$ for n in {1..50}; do curl localhost:1245/reserve_seat ; echo ""; do
 {"status":"Reservation are blocked"}
 {"status":"Reservation are blocked"}
 {"status":"Reservation are blocked"}
-bob@dylan:~$
+khalfan@aisha:~$
 
 ```
 
