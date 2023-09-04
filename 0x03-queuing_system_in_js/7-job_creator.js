@@ -1,4 +1,3 @@
-
 import kue from 'kue';
 
 const jobs =  [{
